@@ -1,0 +1,135 @@
+:root {
+    --cyan: #2ab2af;
+    --bright-yellow: #c0df34;
+    --light-gray: #e5eff5;
+    --grayish-blue: #98a6bd;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 640px;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.top-section {
+    padding: 40px;
+}
+
+.title {
+    color: var(--cyan);
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    color: var(--bright-yellow);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: var(--grayish-blue);
+    line-height: 1.6;
+}
+
+.bottom-group {
+    display: flex;
+}
+
+.bottom-group > section {
+    flex: 1;
+    padding: 40px;
+    color: var(--white);
+}
+
+.subscription-section {
+    background-color: var(--cyan);
+}
+
+.subscription-section h3 {
+    margin-bottom: 18px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.per-month {
+    opacity: 0.6;
+}
+
+.subscription-section p {
+    margin-bottom: 25px;
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bright-yellow);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: #acc62d;
+}
+
+.why-us-section {
+    background-color: rgba(42, 178, 175, 0.85); 
+}
+
+.why-us-section h3 {
+    margin-bottom: 18px;
+}
+
+.why-us-section ul {
+    list-style: none;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.why-us-section li {
+    margin-bottom: 4px;
+}
+
+@media (max-width: 600px) {
+    .bottom-group {
+        flex-direction: column;
+    }
+    
+    .top-section, .bottom-group > section {
+        padding: 25px;
+    }
+}

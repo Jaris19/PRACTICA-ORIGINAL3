@@ -1,0 +1,160 @@
+:root {
+    --dark-magenta: #502050;
+    --soft-pink: #ee68a4;
+    --dark-grayish-magenta: #937b92;
+    --light-grayish-magenta: #f7f2f7;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    color: var(--dark-magenta);
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 25px;
+    max-width: 400px;
+}
+
+.hero-text p {
+    color: var(--dark-grayish-magenta);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+
+.ratings-container {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rating-card {
+    background-color: var(--light-grayish-magenta);
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.stars {
+    color: #ff9d00;
+    margin-right: 30px;
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+}
+
+.rating-card p {
+    color: var(--dark-magenta);
+    font-weight: 700;
+}
+
+
+.star-1 { align-self: flex-start; }
+.star-2 { align-self: center; }
+.star-3 { align-self: flex-end; }
+
+
+.testimonials-grid {
+    display: flex;
+    gap: 30px;
+    height: 300px; 
+}
+
+.testimonial-card {
+    background-color: var(--dark-magenta);
+    color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    flex: 1;
+    height: fit-content;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.status {
+    color: var(--soft-pink);
+    font-size: 0.9rem;
+}
+
+.quote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+
+.card-2 { margin-top: 20px; }
+.card-3 { margin-top: 40px; }
+
+
+@media (max-width: 900px) {
+    .hero-section, .testimonials-grid {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero-text h1 { max-width: 100%; font-size: 2.2rem; }
+
+    .rating-card {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .star-1, .star-2, .star-3, .card-2, .card-3 {
+        align-self: center;
+        margin-top: 0;
+    }
+}

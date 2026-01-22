@@ -1,0 +1,121 @@
+:root {
+    --main-bg: #090b1a; 
+    --card-bg: #1b1938; 
+    --accent-purple: #aa5cdb; 
+    --white: #ffffff;
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    display: flex;
+    max-width: 1100px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.card-content {
+    flex: 1;
+    padding: 70px;
+}
+
+.main-heading {
+    color: var(--white);
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.accent {
+    color: var(--accent-purple);
+}
+
+.description {
+    color: var(--transparent-white);
+    line-height: 1.6;
+    margin-bottom: 60px;
+    font-size: 1rem;
+}
+
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--transparent-white-stat);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+
+.card-image {
+    flex: 1;
+    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-purple);
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+}
+
+
+@media (max-width: 800px) {
+    .card {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .card-image {
+        height: 250px;
+    }
+
+    .card-content {
+        padding: 40px 30px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
